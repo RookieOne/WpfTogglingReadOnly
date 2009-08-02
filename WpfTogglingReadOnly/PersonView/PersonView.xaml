@@ -1,0 +1,21 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:PersonView="clr-namespace:WpfTogglingReadOnly.PersonView">
+    
+    <DataTemplate DataType="{x:Type PersonView:PersonViewModel}">
+        
+        <StackPanel>
+            <Label Content="FirstName" />            
+            <TextBox Style="{StaticResource TextBoxStyle}"  
+                     Text="{Binding FirstName}" />
+            
+            <Label Content="LastName" />
+            <TextBox Style="{StaticResource TextBoxStyle}"
+                     Text="{Binding LastName}" />
+            <Button Command="{Binding ToggleReadOnlyCommand}" Content="Toggle Read Only" />
+        </StackPanel>
+        
+    </DataTemplate> 
+    
+    
+</ResourceDictionary>
